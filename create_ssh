@@ -1,0 +1,53 @@
+zeyad@zeyad-SVE1411EGXB:~/.ssh$ ls -la
+total 32
+drwxrwxr-x  2 zeyad zeyad 4096 May 26 23:21 .
+drwxr-xr-x 50 zeyad zeyad 4096 Aug 16 20:21 ..
+-rw-rw-r--  1 zeyad zeyad 1766 Apr 19 00:36 id_rsa
+-rw-rw-r--  1 zeyad zeyad 1766 May 26 23:19 id_rsa_new_github
+-rw-rw-r--  1 zeyad zeyad  401 May 26 23:19 id_rsa_new_github.pub
+-rw-rw-r--  1 zeyad zeyad  409 Apr 19 00:36 id_rsa.pub
+-rw-rw-r--  1 zeyad zeyad 4422 May 26 23:25 known_hosts
+zeyad@zeyad-SVE1411EGXB:~/.ssh$ emacs id_rsa_new_github
+zeyad@zeyad-SVE1411EGXB:~/.ssh$ cat id_rsa_new_github
+zeyad@zeyad-SVE1411EGXB:~/.ssh$ mv id_rsa_new_github id_rsa_github
+zeyad@zeyad-SVE1411EGXB:~/.ssh$ ls
+id_rsa         id_rsa_new_github~     id_rsa.pub
+id_rsa_github  id_rsa_new_github.pub  known_hosts
+zeyad@zeyad-SVE1411EGXB:~/.ssh$ mv id_rsa_new_github.pub id_rsa_github.pub 
+zeyad@zeyad-SVE1411EGXB:~/.ssh$ ls
+id_rsa         id_rsa_github.pub   id_rsa.pub
+
+zeyad@zeyad-SVE1411EGXB:~/.ssh$ ls
+id_rsa  id_rsa_github  id_rsa_github.pub  id_rsa_github.pub.pub  id_rsa.pub  known_hosts
+zeyad@zeyad-SVE1411EGXB:~/.ssh$ ssh-keygen -t rsa -C "zeyadatef@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/zeyad/.ssh/id_rsa): id_rsa_github
+id_rsa_github already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in id_rsa_github.
+Your public key has been saved in id_rsa_github.pub.
+The key fingerprint is:
+````````````````````````key will be here d:4b zeyadatef@gmail.com
+The key's randomart image is:
++--[ RSA 2048]----+
+|                 |
+
+zeyad@zeyad-SVE1411EGXB:~/.ssh$ eval "$(ssh-agent -s)"
+Agent pid 5376
+zeyad@zeyad-SVE1411EGXB:~/.ssh$ ssh-add ~/.ssh/id_rsa_github
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0664 for '/home/zeyad/.ssh/id_rsa_github' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+zeyad@zeyad-SVE1411EGXB:~/.ssh$ subl id_rsa_github.pub
+zeyad@zeyad-SVE1411EGXB:~/.ssh$ 
+
+
+
+
+and then copy the key from .pub file and pasted in github.come/setting/path/to/the/key/folder
+

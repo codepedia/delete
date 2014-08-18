@@ -1,0 +1,9 @@
+the sub-pages inherite everything from the parent page index.liquid , to over ride any part of the newly created script , you do the below .
+
+If that's all there was to inheritance, it wouldn't be very useful. That's where blocks come in. Blocks allow children to overwrite portions of a parent page. Let's try it out.
+
+Open app/views/pages/index.liquid and enclose "Coming soon." with a block tag like so.
+
+{% block main %}
+    Coming Soon.
+{% endblock %}

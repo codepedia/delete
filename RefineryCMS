@@ -1,0 +1,225 @@
+RubyGems system software updated
+zeyad@zeyad-SVE1411EGXB:~/refine$ ls
+(reverse-i-search)`': subl /core/lib/generators/^Cfinery/dummy/templates/rails/database.yml
+(reverse-i-search)`': ^Cm install mysql2 -v '0.3.16'
+zeyad@zeyad-SVE1411EGXB:~/refine$ refinerycms active
+refinerycms: command not found
+zeyad@zeyad-SVE1411EGXB:~/refine$ gem install refinerycms
+Fetching: decorators-1.0.3.gem (100%)
+Successfully installed decorators-1.0.3
+Fetching: truncate_html-0.9.2.gem (100%)
+Successfully installed truncate_html-0.9.2
+Fetching: awesome_nested_set-2.1.6.gem (100%)
+Successfully installed awesome_nested_set-2.1.6
+Fetching: routing-filter-0.3.1.gem (100%)
+Successfully installed routing-filter-0.3.1
+Fetching: rails-i18n-0.7.4.gem (100%)
+Successfully installed rails-i18n-0.7.4
+Fetching: refinerycms-i18n-2.1.0.gem (100%)
+Successfully installed refinerycms-i18n-2.1.0
+Fetching: refinerycms-core-2.1.2.gem (100%)
+Successfully installed refinerycms-core-2.1.2
+Fetching: acts_as_indexed-0.8.3.gem (100%)
+Successfully installed acts_as_indexed-0.8.3
+Fetching: refinerycms-resources-2.1.2.gem (100%)
+Successfully installed refinerycms-resources-2.1.2
+Fetching: babosa-0.3.11.gem (100%)
+Successfully installed babosa-0.3.11
+Fetching: seo_meta-1.4.0.gem (100%)
+Successfully installed seo_meta-1.4.0
+Fetching: globalize-3.1.0.gem (100%)
+
+Globalize has extracted versioning support to a separate gem named
+globalize-versioning. If you are using versioning (with paper_trail
+or any other versioning gem), please add the line
+"gem 'globalize-versioning'" to your Gemfile and go to the github
+page at globalize/globalize-versioning if you encounter any problems.
+
+Note that the globalize-versioning gem does not delegate versions to
+the translation table, so you will have to update your syntax to
+the form: `post.translation.versions`. See the globalize-versioning
+readme for details.
+
+Successfully installed globalize-3.1.0
+Fetching: friendly_id-4.0.10.1.gem (100%)
+NOTE: FriendlyId 4.x breaks compatibility with 3.x. If you're upgrading
+from 3.x, please see this document:
+
+http://rubydoc.info/github/norman/friendly_id/master/file/WhatsNew.md
+
+Successfully installed friendly_id-4.0.10.1
+Fetching: refinerycms-pages-2.1.2.gem (100%)
+Successfully installed refinerycms-pages-2.1.2
+Fetching: refinerycms-images-2.1.2.gem (100%)
+Successfully installed refinerycms-images-2.1.2
+Fetching: refinerycms-dashboard-2.1.2.gem (100%)
+Successfully installed refinerycms-dashboard-2.1.2
+Fetching: refinerycms-authentication-2.1.2.gem (100%)
+Successfully installed refinerycms-authentication-2.1.2
+Fetching: refinerycms-2.1.2.gem (100%)
+Successfully installed refinerycms-2.1.2
+Parsing documentation for decorators-1.0.3
+Installing ri documentation for decorators-1.0.3
+Parsing documentation for truncate_html-0.9.2
+Installing ri documentation for truncate_html-0.9.2
+Parsing documentation for awesome_nested_set-2.1.6
+Installing ri documentation for awesome_nested_set-2.1.6
+Parsing documentation for routing-filter-0.3.1
+Installing ri documentation for routing-filter-0.3.1
+Parsing documentation for rails-i18n-0.7.4
+Installing ri documentation for rails-i18n-0.7.4
+Parsing documentation for refinerycms-i18n-2.1.0
+Installing ri documentation for refinerycms-i18n-2.1.0
+Parsing documentation for refinerycms-core-2.1.2
+Installing ri documentation for refinerycms-core-2.1.2
+Parsing documentation for acts_as_indexed-0.8.3
+Installing ri documentation for acts_as_indexed-0.8.3
+Parsing documentation for refinerycms-resources-2.1.2
+Installing ri documentation for refinerycms-resources-2.1.2
+Parsing documentation for babosa-0.3.11
+Installing ri documentation for babosa-0.3.11
+Parsing documentation for seo_meta-1.4.0
+Installing ri documentation for seo_meta-1.4.0
+Parsing documentation for globalize-3.1.0
+Installing ri documentation for globalize-3.1.0
+Parsing documentation for friendly_id-4.0.10.1
+Installing ri documentation for friendly_id-4.0.10.1
+Parsing documentation for refinerycms-pages-2.1.2
+Installing ri documentation for refinerycms-pages-2.1.2
+Parsing documentation for refinerycms-images-2.1.2
+Installing ri documentation for refinerycms-images-2.1.2
+Parsing documentation for refinerycms-dashboard-2.1.2
+Installing ri documentation for refinerycms-dashboard-2.1.2
+Parsing documentation for refinerycms-authentication-2.1.2
+Installing ri documentation for refinerycms-authentication-2.1.2
+Parsing documentation for refinerycms-2.1.2
+Installing ri documentation for refinerycms-2.1.2
+Done installing documentation for decorators, truncate_html, awesome_nested_set, routing-filter, rails-i18n, refinerycms-i18n, refinerycms-core, acts_as_indexed, refinerycms-resources, babosa, seo_meta, globalize, friendly_id, refinerycms-pages, refinerycms-images, refinerycms-dashboard, refinerycms-authentication, refinerycms after 2 seconds
+18 gems installed
+zeyad@zeyad-SVE1411EGXB:~/refine$ refinerycms active
+      create  
+      create  README.rdoc
+      create  Rakefile
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+      create  app
+      create  app/assets/javascripts/application.js
+      create  app/assets/stylesheets/application.css
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/views/layouts/application.html.erb
+      create  app/assets/images/.keep
+      create  app/mailers/.keep
+      create  app/models/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/secrets.yml
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/cookies_serializer.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/session_store.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor/assets/javascripts
+      create  vendor/assets/javascripts/.keep
+      create  vendor/assets/stylesheets
+      create  vendor/assets/stylesheets/.keep
+       apply  /home/zeyad/.rvm/gems/ruby-2.1.2/gems/refinerycms-2.1.2/templates/refinery/installer.rb
+      append    Gemfile
+         run    bundle install from "."
+Fetching gem metadata from https://rubygems.org/........
+Fetching additional metadata from https://rubygems.org/..
+Resolving dependencies...
+Bundler could not find compatible versions for gem "sass-rails":
+  In Gemfile:
+    refinerycms (~> 2.1.0) ruby depends on
+      refinerycms-core (= 2.1.0) ruby depends on
+        sass-rails (~> 3.2.3) ruby
+
+    sass-rails (4.0.3)
+        rake    db:create
+Could not find gem 'refinerycms-acts-as-indexed (~> 1.0.0) ruby' in the gems available on this machine.
+Run `bundle install` to install missing gems.
+    generate    refinery:cms --fresh-installation 
+Could not find gem 'refinerycms-acts-as-indexed (~> 1.0.0) ruby' in the gems available on this machine.
+Run `bundle install` to install missing gems.
+    ============================================================================
+    Your new Refinery CMS application is now installed and mounts at '/'
+  ============================================================================
+         run  bundle install
+Fetching gem metadata from https://rubygems.org/........
+Fetching additional metadata from https://rubygems.org/..
+Resolving dependencies...
+Bundler could not find compatible versions for gem "sass-rails":
+  In Gemfile:
+    refinerycms (~> 2.1.0) ruby depends on
+      refinerycms-core (= 2.1.0) ruby depends on
+        sass-rails (~> 3.2.3) ruby
+
+    sass-rails (4.0.3)
+         run  bundle exec spring binstub --all
+/home/zeyad/.rvm/gems/ruby-2.1.2@global/gems/bundler-1.6.2/lib/bundler/resolver.rb:352:in `resolve': Could not find gem 'refinerycms-acts-as-indexed (~> 1.0.0) ruby' in the gems available on this machine. (Bundler::GemNotFound)
+	from /home/zeyad/.rvm/gems/ruby-2.1.2@global/gems/bundler-1.6.2/lib/bundler/resolver.rb:165:in `start'
+	from /home/zeyad/.rvm/gems/ruby-2.1.2@global/gems/bundler-1.6.2/lib/bundler/resolver.rb:129:in `resolve'
+	from /home/zeyad/.rvm/gems/ruby-2.1.2@global/gems/bundler-1.6.2/lib/bundler/definition.rb:203:in `resolve'
+	from /home/zeyad/.rvm/gems/ruby-2.1.2@global/gems/bundler-1.6.2/lib/bundler/definition.rb:133:in `specs'
+	from /home/zeyad/.rvm/gems/ruby-2.1.2@global/gems/bundler-1.6.2/lib/bundler/definition.rb:178:in `specs_for'
+	from /home/zeyad/.rvm/gems/ruby-2.1.2@global/gems/bundler-1.6.2/lib/bundler/definition.rb:167:in `requested_specs'
+	from /home/zeyad/.rvm/gems/ruby-2.1.2@global/gems/bundler-1.6.2/lib/bundler/environment.rb:18:in `requested_specs'
+	from /home/zeyad/.rvm/gems/ruby-2.1.2@global/gems/bundler-1.6.2/lib/bundler/runtime.rb:13:in `setup'
+	from /home/zeyad/.rvm/gems/ruby-2.1.2@global/gems/bundler-1.6.2/lib/bundler.rb:120:in `setup'
+	from /home/zeyad/.rvm/gems/ruby-2.1.2@global/gems/bundler-1.6.2/lib/bundler/setup.rb:17:in `<top (required)>'
+	from /home/zeyad/.rvm/rubies/ruby-2.1.2/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/zeyad/.rvm/rubies/ruby-2.1.2/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+
+=== ACTION REQUIRED ===
+Now you can launch your webserver using:
+
+cd active
+rails server
+
+This will launch the built-in webserver at port 3000.
+You can now see Refinery running in your browser at http://localhost:3000/refinery
+
+Thanks for installing Refinery CMS, we hope you enjoy crafting your application!
+---------
+
+zeyad@zeyad-SVE1411EGXB:~/refine$ cd active/
+zeyad@zeyad-SVE1411EGXB:~/refine/active$ ls
+app  bin  config  config.ru  db  Gemfile  li

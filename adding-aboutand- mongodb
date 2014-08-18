@@ -1,0 +1,532 @@
+zeyad@zeyad-SVE1411EGXB:~$ ls
+ce-installer  Desktop    Downloads         google-chrome-stable_current_amd64.deb  Pictures  Public     tor-browser_en-US
+code          Documents  examples.desktop  Music                                   project   Templates  Videos
+zeyad@zeyad-SVE1411EGXB:~$ service mongodb status
+status: Unknown job: mongodb
+zeyad@zeyad-SVE1411EGXB:~$ service mongod status
+mongod: unrecognized service
+(reverse-i-search)`': ^Crvice mongodb start
+zeyad@zeyad-SVE1411EGXB:~$ ls
+ce-installer  Desktop    Downloads         google-chrome-stable_current_amd64.deb  Pictures  Public     tor-browser_en-US
+code          Documents  examples.desktop  Music                                   project   Templates  Videos
+zeyad@zeyad-SVE1411EGXB:~$ ls
+ce-installer  Desktop    Downloads         google-chrome-stable_current_amd64.deb  Pictures  Public     tor-browser_en-US
+code          Documents  examples.desktop  Music                                   project   Templates  Videos
+zeyad@zeyad-SVE1411EGXB:~$ sudo service mongodb status
+[sudo] password for zeyad: 
+mongodb start/running, process 972
+zeyad@zeyad-SVE1411EGXB:~$ ps aux | grep 972
+r
+zeyad@zeyad-SVE1411EGXB:~$ ls
+ce-installer  Desktop    Downloads         google-chrome-stable_current_amd64.deb  Pictures  Public     tor-browser_en-US
+code          Documents  examples.desktop  Music                                   project   Templates  Videos
+zeyad@zeyad-SVE1411EGXB:~$ cd code/
+zeyad@zeyad-SVE1411EGXB:~/code$ ls
+app1  brand  dev  didier  french_loco  new2  wisdom_manually
+zeyad@zeyad-SVE1411EGXB:~/code$ ls
+app1  brand  dev  didier  french_loco  new2  wisdom_manually
+zeyad@zeyad-SVE1411EGXB:~/code$ cd didier/
+zeyad@zeyad-SVE1411EGXB:~/code/didier$ ls
+proj
+zeyad@zeyad-SVE1411EGXB:~/code/didier$ cd proj/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj$ ls
+my_first_site
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj$ cd my_first_site/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ ls
+app  config  config.ru  data  Gemfile  Gemfile.lock  log  public
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ cd app/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ ls
+content_types  views
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ ls
+content_types  views
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ cd content_types/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/content_types$ ls
+customer_messages.yml
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/content_types$ cd ..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ ls
+content_types  views
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ cd views/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views$ ls
+pages  snippets
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views$ cd pages/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ ls
+404.liquid  contact.liquid  index.liquid
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ subl index.liquid 
+
+(sublime_text:11522): GLib-CRITICAL **: Source ID 4709 was not found when attempting to remove it
+
+
+404.liquid  contact.liquid  index.liquid
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ cat index.liquid 
+---
+title: Home
+published: true
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>
+      {{ page.title }} - {{ site.name }}
+      | {% if page.seo_title %}{{ page.seo_title }}{% else %}{{ site.seo_title }}{% endif %}
+    </title>
+    <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.meta_description }}{% endif %}">
+    <meta name="keywords" content="{{ site.meta_keywords }} {{ page.meta_keywords }}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    {{ 'bootstrap.css' | stylesheet_tag }}
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- Site Title -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 col-sm-12">
+          <h1>{{ site.name }}</h1>
+        </div>
+      </div>
+
+      <!-- Site Navigation -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 col-sm-12">
+          <nav class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li {% if page.slug == "index" %}class="active"{% endif %}>
+                  <a href="/">Home</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Page Content -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 col-sm-12">
+          <h2>{{ page.title }}</h2>
+          Coming Soon.
+        </div>
+      </div>
+    </div>
+
+    <!-- Javascripts -->
+    <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    {{ 'bootstrap.min.js' | javascript_tag }}
+  </body>
+</html>zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ ls
+404.liquid  contact.liquid  index.liquid
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ ls
+404.liquid  contact.liquid  index.liquid
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ ls
+404.liquid  contact.liquid  index.liquid
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ ls
+404.liquid  contact.liquid  index.liquid
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ rm -r contact.liquid 
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ ls
+404.liquid  index.liquid
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ cd ..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views$ ls
+pages  snippets
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views$ cd snippets/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/snippets$ ls
+footer.liquid
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/snippets$ cd ..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views$ cd ..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ ls
+content_types  views
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ cd content_types/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/content_types$ ls
+customer_messages.yml
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/content_types$ rm -r customer_messages.yml 
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/content_types$ ls
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/content_types$ ls
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/content_types$ cd ..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ ls
+content_types  views
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ cd ..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ bundle exec wagon push development
+* Pushing Site
+* Pushing Snippets
+  en
+    updating Footer.............................................................[done]
+* Pushing ContentTypes
+* Pushing Pages
+  en
+    updating index..............................................................[done]
+    updating 404................................................................[done]
+* Pushing ThemeAssets
+    updating fonts/glyphicons-halflings-regular.ttf.............................[same]
+    updating fonts/glyphicons-halflings-regular.svg.............................[same]
+    updating fonts/glyphicons-halflings-regular.eot.............................[same]
+    updating fonts/glyphicons-halflings-regular.woff............................[same]
+    updating stylesheets/bootstrap.css..........................................[same]
+    updating stylesheets/bootstrap.min.css......................................[same]
+    updating stylesheets/bootstrap-theme.min.css................................[same]
+    updating stylesheets/bootstrap-theme.css....................................[same]
+    updating javascripts/bootstrap.js...........................................[same]
+    updating javascripts/bootstrap.min.js.......................................[same]
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ ls
+app  config  config.ru  data  Gemfile  Gemfile.lock  log  public
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ bundle exec wagon generate page about
+Do you prefer a HAML template ? no
+      create  app/views/pages/about.liquid
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ bundle exec wagon push development
+* Pushing Site
+* Pushing Snippets
+  en
+    updating Footer.............................................................[done]
+* Pushing ContentTypes
+* Pushing Pages
+  en
+    updating index..............................................................[done]
+    creating about..............................................................[done]
+    updating 404................................................................[done]
+* Pushing ThemeAssets
+    updating fonts/glyphicons-halflings-regular.ttf.............................[same]
+    updating fonts/glyphicons-halflings-regular.svg.............................[same]
+    updating fonts/glyphicons-halflings-regular.eot.............................[same]
+    updating fonts/glyphicons-halflings-regular.woff............................[same]
+    updating stylesheets/bootstrap.css..........................................[same]
+    updating stylesheets/bootstrap.min.css......................................[same]
+    updating stylesheets/bootstrap-theme.min.css................................[same]
+    updating stylesheets/bootstrap-theme.css....................................[same]
+    updating javascripts/bootstrap.js...........................................[same]
+    updating javascripts/bootstrap.min.js.......................................[same]
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ cd app/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ ls
+content_types  views
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ cd views/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views$ ls
+pages  snippets
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views$ cd pages/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ ls
+404.liquid  about.liquid  index.liquid
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ subl about.liquid 
+
+(sublime_text:11813): GLib-CRITICAL **: Source ID 7779 was not found when attempting to remove it
+
+(sublime_text:11813): GLib-CRITICAL **: Source ID 11337 was not found when attempting to remove it
+
+(sublime_text:11813): GLib-CRITICAL **: Source ID 14260 was not found when attempting to remove it
+^C
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ cd ../..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ cd ..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ bundle exec wagon push development
+* Pushing Site
+* Pushing Snippets
+  en
+    updating Footer.............................................................[done]
+* Pushing ContentTypes
+* Pushing Pages
+  en
+    updating index..............................................................[done]
+    updating about..............................................................[done]
+    updating 404................................................................[done]
+* Pushing ThemeAssets
+    updating fonts/glyphicons-halflings-regular.ttf.............................[same]
+    updating fonts/glyphicons-halflings-regular.svg.............................[same]
+    updating fonts/glyphicons-halflings-regular.eot.............................[same]
+    updating fonts/glyphicons-halflings-regular.woff............................[same]
+    updating stylesheets/bootstrap.css..........................................[same]
+    updating stylesheets/bootstrap.min.css......................................[same]
+    updating stylesheets/bootstrap-theme.min.css................................[same]
+    updating stylesheets/bootstrap-theme.css....................................[same]
+    updating javascripts/bootstrap.js...........................................[same]
+    updating javascripts/bootstrap.min.js.......................................[same]
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ 
+
+
+===============================================================================================================
+
+
+root       315  0.0  0.0  51716  1972 ?        Ss   20:23   0:00 /lib/systemd/systemd-udevd --daemon
+mongodb    972  1.1  0.7 514192 46848 ?        Ssl  20:23   1:47 /usr/bin/mongod --config /etc/mongodb.conf
+zeyad     9728  2.4  1.3 1036784 80492 ?       Sl   22:46   0:13 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtrials=ExtensionInstallVerification/None/OmniboxBundledExperimentV1/StandardR4/OmniboxStopTimer/Standard/Prerender/PrerenderEnabled/PrerenderFromOmnibox/OmniboxPrerenderEnabled/PrerenderLocalPredictorSpec/LocalPredictor=Disabled/QUIC/Disabled/SettingsEnforcement/no_enforcement/Test0PercentDefault/group_01/UMA-Dynamic-Binary-Uniformity-Trial/default/UMA-New-Install-Uniformity-Trial/Experiment/UMA-Population-Restrict/normal/UMA-Session-Randomized-Uniformity-Trial-5-Percent/default/UMA-Uniformity-Trial-1-Percent/group_95/UMA-Uniformity-Trial-10-Percent/group_06/UMA-Uniformity-Trial-100-Percent/group_01/UMA-Uniformity-Trial-20-Percent/group_01/UMA-Uniformity-Trial-5-Percent/group_15/UMA-Uniformity-Trial-50-Percent/default/VoiceTrigger/Install/ --renderer-print-preview --enable-threaded-compositing --enable-delegated-renderer --disable-accelerated-video-decode --enable-software-compositing --channel=7235.43.1599815930
+zeyad     9919  0.0  0.0  15944   924 pts/15   S+   22:55   0:00 grep --color=auto 972
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ bundle exec wagon push development --force
+Unable to read the local LocomotiveCMS site. Please check the logs.
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ cd app/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ bundle exec wagon push development --force
+The path does not point to a LocomotiveCMS site
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ ls
+content_types  views
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ cd ..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ bundle exec wagon push development -f
+Unable to read the local LocomotiveCMS site. Please check the logs.
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ bundle exec wagon push -r all -t development -f
+Unable to read the local LocomotiveCMS site. Please check the logs.
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ ls
+app  config  config.ru  data  Gemfile  Gemfile.lock  log  public
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ cd config/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/config$ ls
+deploy.yml  site.yml  translations.yml
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/config$ cat site.yml 
+# The name of this site
+# This text displays in the back-office and
+# can be used in templates through the site.name global variable
+name: my_first_site
+
+# The site's subdomain
+# This option is for sites on multi-site engines
+# The value determines where the site can be accessed under the engine's primary domain
+# subdomain: sample
+
+# An array of domain aliases for the site
+# This option is for sites on multi-site engines
+# domains: [www.example.com, example.com]
+
+# An array of locales (languages) the site is available in
+# The locale listed first is the site's default locale
+# Locales are specified using ISO language codes
+# Possible locales include: en, de, fr, pl, pt-BR, it, nl, nb, es, ru, et, ja, zh-CN
+locales: [en]
+
+# The site's timezone
+# This converts the server's time to the site's time zone in templates
+# The TimeZone class from Rail's ActiveSupport is used to interpret the string
+# Sample timezone strings: Tokyo, Beijing, Moscow, Cairo, Paris, Pacific Time (US & Canada)
+# timezone: Paris
+timezone: "Central Time (US & Canada)"
+
+# For SEO purposes, sites may wish to add a relevant string to the <title> tag
+# And include <meta type="keywords"> and <meta type="description">
+# For this purpose you can set values for these variables here
+# They can be accessed in templates through the site.seo_title, site.meta_keywords, and site.meta_description variables
+seo_title: my_first_site
+meta_keywords: "Arabic products , halal food , whole sale , "
+meta_description: "order arabic products online , tuna , date and More"
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/config$ ls
+deploy.yml  site.yml  translations.yml
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/config$ cd ..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ bundle exec wagon push development -r content_types
+Unable to read the local LocomotiveCMS site. Please check the logs.
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ ls'
+> ls
+> ^C
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ ls
+app  config  config.ru  data  Gemfile  Gemfile.lock  log  public
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ cd app/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ ls
+content_types  views
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ bundle exec wagon push development -r content_types
+The path does not point to a LocomotiveCMS site
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ cd views/pages/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ subl about.liquid 
+^C
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ cd ../../..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ bundle exec wagon push development 
+* Pushing Site
+* Pushing Snippets
+  en
+    updating Footer.............................................................[done]
+* Pushing ContentTypes
+* Pushing Pages
+  en
+    updating index..............................................................[done]
+    updating about..............................................................[done]
+    updating 404................................................................[done]
+* Pushing ThemeAssets
+    updating fonts/glyphicons-halflings-regular.ttf.............................[same]
+    updating fonts/glyphicons-halflings-regular.svg.............................[same]
+    updating fonts/glyphicons-halflings-regular.eot.............................[same]
+    updating fonts/glyphicons-halflings-regular.woff............................[same]
+    creating images/apple-touch-icon-72x72-precomposed.png......................[done]
+    updating stylesheets/bootstrap.css..........................................[same]
+    updating stylesheets/bootstrap.min.css......................................[same]
+    updating stylesheets/bootstrap-theme.min.css................................[same]
+    updating stylesheets/bootstrap-theme.css....................................[same]
+    updating javascripts/bootstrap.js...........................................[same]
+    updating javascripts/bootstrap.min.js.......................................[same]
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ ls
+app  config  config.ru  data  Gemfile  Gemfile.lock  log  public
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ cd app/views/pages/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ ls
+404.liquid  about.liquid  index.liquid
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ subl about.liquid 
+^C
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ cd -
+/home/zeyad/code/didier/proj/my_first_site
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ bundle exec wagon push development 
+* Pushing Site
+* Pushing Snippets
+  en
+    updating Footer.............................................................[done]
+* Pushing ContentTypes
+* Pushing Pages
+  en
+    updating index..............................................................[done]
+    updating about..............................................................[done]
+    updating 404................................................................[done]
+* Pushing ThemeAssets
+    updating fonts/glyphicons-halflings-regular.ttf.............................[same]
+    updating fonts/glyphicons-halflings-regular.svg.............................[same]
+    updating fonts/glyphicons-halflings-regular.eot.............................[same]
+    updating fonts/glyphicons-halflings-regular.woff............................[same]
+    updating images/apple-touch-icon-72x72-precomposed.png......................[same]
+    updating stylesheets/bootstrap.css..........................................[same]
+    updating stylesheets/bootstrap.min.css......................................[same]
+    updating stylesheets/bootstrap-theme.min.css................................[same]
+    updating stylesheets/bootstrap-theme.css....................................[same]
+    updating javascripts/bootstrap.js...........................................[same]
+    updating javascripts/bootstrap.min.js.......................................[same]
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ cd -
+/home/zeyad/code/didier/proj/my_first_site/app/views/pages
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ ls
+404.liquid  about.liquid  index.liquid
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ subl index.liquid 
+
+(sublime_text:12441): GLib-CRITICAL **: Source ID 1957 was not found when attempting to remove it
+
+(sublime_text:12441): GLib-CRITICAL **: Source ID 2175 was not found when attempting to remove it
+
+(sublime_text:12441): GLib-CRITICAL **: Source ID 3691 was not found when attempting to remove it
+
+(sublime_text:12441): GLib-CRITICAL **: Source ID 3697 was not found when attempting to remove it
+
+(sublime_text:12441): GLib-CRITICAL **: Source ID 3711 was not found when attempting to remove it
+
+(sublime_text:12441): GLib-CRITICAL **: Source ID 5757 was not found when attempting to remove it
+
+(sublime_text:12441): GLib-CRITICAL **: Source ID 13974 was not found when attempting to remove it
+
+(sublime_text:12441): GLib-CRITICAL **: Source ID 19511 was not found when attempting to remove it
+
+(sublime_text:12441): GLib-CRITICAL **: Source ID 19515 was not found when attempting to remove it
+^C
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ cd ..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views$ ls
+pages  snippets
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views$ cd ../../..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj$ cd 
+zeyad@zeyad-SVE1411EGXB:~$ ls
+ce-installer  Desktop    Downloads         google-chrome-stable_current_amd64.deb  Pictures  Public     tor-browser_en-US
+code          Documents  examples.desktop  Music                                   project   Templates  Videos
+zeyad@zeyad-SVE1411EGXB:~$ cd code/didier/
+zeyad@zeyad-SVE1411EGXB:~/code/didier$ ls
+proj
+zeyad@zeyad-SVE1411EGXB:~/code/didier$ cd proj/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj$ ls
+my_first_site
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj$ cd my_first_site/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ ls
+app  config  config.ru  data  Gemfile  Gemfile.lock  log  public
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ cd public/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/public$ ls
+fonts  images  javascripts  samples  stylesheets
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/public$ cd stylesheets/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/public/stylesheets$ ls
+bootstrap.css  bootstrap.min.css  bootstrap-theme.css  bootstrap-theme.min.css
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/public/stylesheets$ touch styles.css
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/public/stylesheets$ ls
+bootstrap.css  bootstrap.min.css  bootstrap-theme.css  bootstrap-theme.min.css  styles.css
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/public/stylesheets$ ls
+bootstrap.css  bootstrap.min.css  bootstrap-theme.css  bootstrap-theme.min.css  styles.css
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/public/stylesheets$ subl styles.css 
+
+(sublime_text:12569): GLib-CRITICAL **: Source ID 912 was not found when attempting to remove it
+
+(sublime_text:12569): GLib-CRITICAL **: Source ID 916 was not found when attempting to remove it
+^C
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/public/stylesheets$ cd -
+/home/zeyad/code/didier/proj/my_first_site/public
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/public$ cd ..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ cd app/views/pages/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ ls
+404.liquid  about.liquid  index.liquid
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ subl about.liquid 
+
+(sublime_text:12625): GLib-CRITICAL **: Source ID 4543 was not found when attempting to remove it
+
+(sublime_text:12625): GLib-CRITICAL **: Source ID 8004 was not found when attempting to remove it
+^C
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ cat about.liquid 
+---
+title: About
+
+# true if the page is included in the menu
+listed: true
+
+# true if the page is published
+published: true
+
+# position among sibling pages
+# position: 1
+
+# sets a redirection to the given url (301)
+# redirect_url: "<url to a page or to a remote url>"
+
+# content type that this page is templatizing
+# content_type: "<slug of one of the content types>"
+
+# editable_elements:
+#   'some_block/some_slug': "<text>"
+#   'some_block/some_slug': "<relative path to the file under the public/samples folder>"
+---
+{% extends parent %}
+
+{% block main %}
+
+<div class="img-box">
+    <img src="{{ 'gyeongbokgung-full.jpg' | theme_image_url | resize: '400x'  }}" alt="Gyeongbokgung" />
+    <p>Gyeongbokgung, Seoul</p>
+</div>
+    <p>
+        Thanks for visiting Wisdom for Wanderers!
+        This blog aims to introduce readers to cool things to see, eat, and do all over the world.
+        And along the way, I'll share some handy travel tips that can make wandering the globe easier and more fun than ever. The blog tends to focus on sights and places a little off the tourist trail, so unadventurous beware.
+    </p>
+
+    <p>
+        I hope you enjoy the site and bon voyage!
+    </p>
+
+{% endblock %}
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ cd
+zeyad@zeyad-SVE1411EGXB:~$ cd code/didier/proj/my_first_site/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ ls
+app  config  config.ru  data  Gemfile  Gemfile.lock  log  public
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ bundle exec wagon push development 
+* Pushing Site
+* Pushing Snippets
+  en
+    updating Footer.............................................................[done]
+* Pushing ContentTypes
+* Pushing Pages
+  en
+    updating index..............................................................[done]
+    updating about..............................................................[done]
+    updating 404................................................................[done]
+* Pushing ThemeAssets
+    updating fonts/glyphicons-halflings-regular.ttf.............................[same]
+    updating fonts/glyphicons-halflings-regular.svg.............................[same]
+    updating fonts/glyphicons-halflings-regular.eot.............................[same]
+    updating fonts/glyphicons-halflings-regular.woff............................[same]
+    updating images/apple-touch-icon-72x72-precomposed.png......................[same]
+    creating stylesheets/styles.css.............................................[done]
+    updating stylesheets/bootstrap.css..........................................[same]
+    updating stylesheets/bootstrap.min.css......................................[same]
+    updating stylesheets/bootstrap-theme.min.css................................[same]
+    updating stylesheets/bootstrap-theme.css....................................[same]
+    updating javascripts/bootstrap.js...........................................[same]
+    updating javascripts/bootstrap.min.js.......................................[same]
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ ls
+app  config  config.ru  data  Gemfile  Gemfile.lock  log  public
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ 
+
+
+

@@ -1,0 +1,47 @@
+
+I have installed Locomotive but I think I am missing something in terms of connecting to the database mongodb. I believe that I have missed a point that most likely is step 5 of the guide http://doc.locomotivecms.com/get-started/install-engine
+
+I am using:
+
+Ruby 1.9.3p484 (2013-11-22 revision 43786) [i686-linux]
+Rails 3.2.16
+Wagon version 1.4.0
+
+I have downloaded mongo and followed the procedure found here http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/ and started using sudo service mongodb start
+
+
+I then start the server to see the application and the result is below:
+
+bundle exec unicorn_rails
+I, [2013-12-09T21:49:33.236331 #3668]  INFO -- : listening on addr=0.0.0.0:8080 fd=9
+I, [2013-12-09T21:49:33.236914 #3668]  INFO -- : worker=0 spawning...
+I, [2013-12-09T21:49:33.240283 #3668]  INFO -- : master process ready
+I, [2013-12-09T21:49:33.249781 #3671]  INFO -- : worker=0 spawned pid=3671
+I, [2013-12-09T21:49:33.250816 #3671]  INFO -- : Refreshing Gem list
+WARNING: unable to load the content types, Could not connect to any secondary or primary nodes for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+I, [2013-12-09T21:49:45.580302 #3671]  INFO -- : worker=0 ready
+
+I would be grateful if someone who run into this problem could share what is missing in my configuration.
+
+Thanks
+
+Luca
+
+
+=======================================
+asnwer
+
+It seems like it can't connect to mongodb. Did you make sure that it is running? Try `sudo service mongodb status`. What does that say?
+
+Charlie Greene
+---------------------
+Colibri-Software
+charlie...@colibri-software.com
+
+
+- show quoted text -
+- show quoted text -
+-- 
+You received this message because you are subscribed to the Google Groups "LocomotiveCMS" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to locomotivecm...@googlegroups.com.
+For more options, visit https://groups.google.com/groups/opt_out.

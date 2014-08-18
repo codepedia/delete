@@ -1,0 +1,124 @@
+zeyad@zeyad-SVE1411EGXB:~$ ls
+ce-installer  examples.desktop                        Public
+code          google-chrome-stable_current_amd64.deb  Templates
+Desktop       Music                                   tor-browser_en-US
+Documents     Pictures                                Videos
+Downloads     project
+zeyad@zeyad-SVE1411EGXB:~$ cd code/
+zeyad@zeyad-SVE1411EGXB:~/code$ ls
+app1  brand  dev  didier  french_loco  new2  wisdom_manually
+zeyad@zeyad-SVE1411EGXB:~/code$ cd didier/
+zeyad@zeyad-SVE1411EGXB:~/code/didier$ ls
+proj
+zeyad@zeyad-SVE1411EGXB:~/code/didier$ cd proj/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj$ ls
+my_first_site
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj$ cd my_first_site/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ ls
+app  config  config.ru  data  Gemfile  Gemfile.lock  log  public
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ cd config/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/config$ ls
+deploy.yml  site.yml  translations.yml
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/config$ ls
+deploy.yml  site.yml  translations.yml
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/config$ cd ..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ ls
+app  config  config.ru  data  Gemfile  Gemfile.lock  log  public
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ cd app/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ ls
+content_types  views
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ cd content_types/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/content_types$ ls
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/content_types$ ls
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/content_types$ cd ..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ cd views/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views$ ls
+pages  snippets
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views$ cd pages/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ ls
+404.liquid  index.liquid
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views/pages$ cd ..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views$ ls
+pages  snippets
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app/views$ cd ..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ ls
+content_types  views
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/app$ cd ..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ cd ../..
+zeyad@zeyad-SVE1411EGXB:~/code/didier$ ls
+proj
+zeyad@zeyad-SVE1411EGXB:~/code/didier$ cd proj/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj$ ls
+my_first_site
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj$ cd my_first_site/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ ls
+app  config  config.ru  data  Gemfile  Gemfile.lock  log  public
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ cd config/
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/config$ ls
+deploy.yml  site.yml  translations.yml
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/config$ subl deploy.yml 
+
+(sublime_text:8401): GLib-CRITICAL **: Source ID 5774 was not found when attempting to remove it
+
+(sublime_text:8401): GLib-CRITICAL **: Source ID 5778 was not found when attempting to remove it
+
+(sublime_text:8401): GLib-CRITICAL **: Source ID 8934 was not found when attempting to remove it
+
+(sublime_text:8401): GLib-CRITICAL **: Source ID 46019 was not found when attempting to remove it
+
+^C
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/config$ cat deploy.yml development:
+  host: localhost:8080
+  email: nullsoulexception@gmail.com
+  password: test245308
+  api_key: cf133c019c4eaaf396bab67c12da233236e8e177
+#staging:
+ # host: staging.example.com
+  #email: john@doe.net
+  #password: apassword
+  # api_key: <your api key here>
+#production:
+ # host: www.example.com
+  #email: john@doe.net
+  #password: apassword
+  # api_key: <your api key here>zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_fiCould not find command "helo".sh 
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/config$ 
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/config$ wagon help pushUsage:
+  wagon push ENV [PATH]
+
+Options:
+  -r, [--resources=one two three]            # Only push the resource(s) passed in argument
+  -f, [--force]                              # Force the push of a resource
+  -t, [--translations], [--no-translations]  # Push the local translations (by default, they are not)
+  -d, [--data], [--no-data]                  # Push the content entries and the editable elements (by default, they are not)
+  -v, [--verbose], [--no-verbose]            # display the full error stack trace if an error occurs
+
+Push a site to a remote LocomotiveCMS engine
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site/config$ cd ..
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ ls
+app  config  config.ru  data  Gemfile  Gemfile.lock  log  public
+zeyad@zeyad-SVE1411EGXB:~/code/didier/proj/my_first_site$ bundle exec wagon push development
+* Pushing Site
+* Pushing Snippets
+  en
+    creating Footer.............................................................[done]
+* Pushing ContentTypes
+* Pushing Pages
+  en
+    updating index..............................................................[done]
+      creating favicon.png......................................................[done]
+      creating apple-touch-icon-144x144-precomposed.png.........................[done]
+      creating apple-touch-icon-114x114-precomposed.png.........................[done]
+      creating apple-touch-icon-72x72-precomposed.png...........................[done]
+      creating apple-touch-icon-precomposed.png.................................[done]
+    updating 404................................................................[done]
+* Pushing ThemeAssets
+    creating fonts/glyphicons-halflings-regular.ttf.............................[done]
+    creating fonts/glyphicons-halflings-regular.svg.............................[done]
+    creating fonts/glyphicons-halflings-regular.eot.............................[done]
+    creating fonts/glyphicons-halflings-regular.woff............................[done]
+    creating stylesheets/bootstrap.css..........................................[done]
+    creating stylesheets/bootstrap.min.css......................................[done]
+    creating stylesheets/bootstrap-theme.min.css................................[done]
+    creating stylesheets/bootstrap-theme.css....................................[done]
+    creating ja
