@@ -1,0 +1,44 @@
+1: install to a flash drive from online .
+2: format the flash file so that it can intereact \\ I guese reformat with usb universal tool.
+3:install the ubuntu image IOS from ubuntu offcial site and "BROWSE" from inside the flash drive to import it.
+4: make sure that you can boot from a flash drive   \\ by defualt pc boots from the internal hard disk "the c:\\ drive if i am not wrong"
+5:if the last step is not met : Do , access the BIOS MENUE via "PRESSING" assist in faroq lap top vaio sony, "mine has too"
+6: acces the BIOS menue and change to boot from external drive"i,e USB drive."
+7: will start booting from the usb , choose the first option "addme" and do try ubuntu , connecto to the net 
+8:  Click on the install icon , choose along side . if you can't see it, then go with the option "Something else"
+9: open search and type "gparted", this will allow you to partition the need allocations , ext4 with logical option and the \ directory. and swap file partition for.
+
+read from SO:
+There are two kind of disk in terms of legacy partition table.
+
+Primary - Generally OS are use this kind of partition.
+Extended - A special type of primary partition that holds many logical partition.
+Max number of primary partition (including extended partition) can be 4. Extended partition doesn't take much space. Consider its a packing box and your logical partitions are packed inside it.
+
+Filetypes of disk parition:
+
+These defines how the files will written in disk. Earlier windows (upto xp) used FAT, FAT32. Newer windows file systems called NTFS.
+
+Unix / Linux uses different file types like ext, ext3, ext4. In addition linux uses a partition with special format called swap.
+
+Now I am assuming you want to have dual boot with windows. So first 50 GB is for ubuntu, second 50 GB for windows system and rest 150 GB for data.
+
+Now ubuntu requires a swap partition (not necessarily if you have big amount of ram). Its generally calculated 1.5x RAM SIZE. If you have a 2GB RAM, preserve 1 GB for SWAP, have 4 GB RAM , preserve 512MB. Its your choice. Good amount of SWAP improves performance.
+
+Steps
+
+Click on unallocated space, click on new. Enter size as 48GB (you have to enter in mb), choose file system type as ext4, mount point /, partition type primary This means ubuntu root partition.
+
+Click on unallocated space, click on new. Enter size as 2GB, choose primary partition, file system type SWAP.
+
+Click on unallocated space, click on new. Enter size 50 GB, choose primary partition, file type ntfs (I don't remember whether this option available, you can use gparted later to format if its not available .)
+
+Click on rest unallocated space, click on it. Choose ntfs as file system, partition type logical and create it. This will automatically create extended partition.
+
+Explanation:
+
+Why logical drive in ntfs? Its because it will be available to both windows and ubuntu. Windows can't work with ext file system.
+
+If you don't want windows at all, you can create all file system with ext4. But remember if you ever try to install windows, you have to reformat everything. Otherwise those drives won't be visible.
+
+If you don't want to install a windows system, in step 3, choose logical instead of primary. 

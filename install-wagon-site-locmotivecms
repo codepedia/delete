@@ -1,0 +1,188 @@
+active  Gemfile  Gemfile.lock  mongoid.yml
+zeyad@zeyad-SVE1411EGXB:~/developments/bstrap$ mkdir engine_active
+zeyad@zeyad-SVE1411EGXB:~/developments/bstrap$ cd engine_active/
+zeyad@zeyad-SVE1411EGXB:~/developments/bstrap/engine_active$ wagon list_templates
+blank - A blank LocomotiveCMS site with the minimal files.
+bootstrap2 - A LocomotiveCMS site with Twitter Bootstrap (v2.3.2) and Font Awesome (v3.2.1).
+bootstrap3 - A LocomotiveCMS site powered by Twitter bootstrap (v3.0.0).
+foundation - A LocomotiveCMS site powered by Foundation (v4.3.2).
+unzip - Unzip a local or remote (http, https, ftp) zipped LocomotiveCMS site.
+zeyad@zeyad-SVE1411EGXB:~/developments/bstrap/engine_active$ wagon init engine_dir --template=bootstrap3
+      create  engine_dir
+      create  engine_dir/Gemfile
+      create  engine_dir/app/content_types
+      create  engine_dir/app/views/pages/404.liquid
+      create  engine_dir/app/views/pages/404.liquid.haml
+      create  engine_dir/app/views/pages/index.liquid
+      create  engine_dir/app/views/pages/index.liquid.haml
+      create  engine_dir/app/views/snippets/footer.liquid
+      create  engine_dir/app/views/snippets/footer.liquid.haml
+      create  engine_dir/config.ru
+      create  engine_dir/config/deploy.yml
+      create  engine_dir/config/site.yml
+      create  engine_dir/config/translations.yml
+      create  engine_dir/data
+      create  engine_dir/public/fonts/glyphicons-halflings-regular.eot
+      create  engine_dir/public/fonts/glyphicons-halflings-regular.svg
+      create  engine_dir/public/fonts/glyphicons-halflings-regular.ttf
+      create  engine_dir/public/fonts/glyphicons-halflings-regular.woff
+      create  engine_dir/public/javascripts/bootstrap.js
+      create  engine_dir/public/javascripts/bootstrap.min.js
+      create  engine_dir/public/samples/apple-touch-icon-114x114-precomposed.png
+      create  engine_dir/public/samples/apple-touch-icon-144x144-precomposed.png
+      create  engine_dir/public/samples/apple-touch-icon-72x72-precomposed.png
+      create  engine_dir/public/samples/apple-touch-icon-precomposed.png
+      create  engine_dir/public/samples/favicon.png
+      create  engine_dir/public/stylesheets/bootstrap-theme.css
+      create  engine_dir/public/stylesheets/bootstrap-theme.min.css
+      create  engine_dir/public/stylesheets/bootstrap.css
+      create  engine_dir/public/stylesheets/bootstrap.min.css
+Do you prefer HAML templates ? no
+      remove  engine_dir/app/views/pages/index.liquid.haml
+      remove  engine_dir/app/views/pages/404.liquid.haml
+      remove  engine_dir/app/views/snippets/footer.liquid.haml
+
+Congratulations, your site "engine_dir" has been created successfully !
+Next steps:
+	cd ./engine_dir
+	bundle install
+	bundle exec wagon serve
+	open http://0.0.0.0:3333
+zeyad@zeyad-SVE1411EGXB:~/developments/bstrap/engine_active$ ls
+engine_dir
+zeyad@zeyad-SVE1411EGXB:~/developments/bstrap/engine_active$ cd engine_dir/
+zeyad@zeyad-SVE1411EGXB:~/developments/bstrap/engine_active/engine_dir$ ls
+app  config  config.ru  data  Gemfile  public
+zeyad@zeyad-SVE1411EGXB:~/developments/bstrap/engine_active/engine_dir$ cat Gemfile 
+source 'https://rubygems.org'
+
+# ruby '1.9.3'
+
+gem 'locomotivecms_wagon', '1.4.0'
+
+group :development do
+  # Mac OS X
+  gem 'rb-fsevent', '~> 0.9.1', require: RUBY_PLATFORM.include?('darwin') && 'rb-fsevent'
+
+  # Unix
+  gem 'therubyracer', require: 'v8', platforms: :ruby
+  gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM.include?('linux') && 'rb-inotify'
+
+  # Windows
+  gem 'wdm', '>= 0.1.0', require: RUBY_PLATFORM =~ /mswin|mingw/i && 'wdm'
+end
+
+group :misc do
+  # Add your extra gems here
+  # gem 'susy', require: 'susy'
+  # gem 'redcarpet', require: 'redcarpet'
+endzeyad@zeyad-SVE1411EGXB:~/developments/bstrap/engine_active/engine_dir$ cat ../../Gemfile
+source 'https://rubygems.org'
+
+gem 'locomotive_cms', '~> 2.4.1', :require => 'locomotive/engine'
+gem 'rails', '3.2.17'
+
+# Bundle edge Rails instead:
+# gem 'rails', :git => 'git://github.com/rails/rails.git'
+
+
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'compass-rails',  '~> 1.1.3'
+  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+   gem 'therubyracer', :platforms => :ruby
+
+  gem 'uglifier', '>= 1.0.3'
+end
+
+
+
+# To use ActiveModel has_secure_password
+# gem 'bcrypt-ruby', '~> 3.0.0'
+
+# To use Jbuilder templates for JSON
+# gem 'jbuilder'
+
+# Use unicorn as the app server
+ gem 'unicorn'
+
+# Deploy with Capistrano
+# gem 'capistrano'
+
+# To use debugger
+# gem 'debugger'
+zeyad@zeyad-SVE1411EGXB:~/developments/bstrap/engine_active/engine_dir$ bundle install
+Fetching gem metadata from https://rubygems.org/........
+Fetching additional metadata from https://rubygems.org/..
+Resolving dependencies...
+Using RedCloth 4.2.9
+Using i18n 0.6.11
+Using multi_json 1.8.4
+Using activesupport 3.2.19
+Using coderay 1.1.0
+Using erubis 2.7.0
+Using better_errors 1.0.1
+Using chronic 0.10.2
+Using chunky_png 1.3.1
+Using coffee-script-source 1.8.0
+Using execjs 2.2.1
+Using coffee-script 2.2.0
+Using colorize 0.5.8
+Using commonjs 0.2.7
+Using fssm 0.2.10
+Using sass 3.2.19
+Using compass 0.12.7
+Using daemons 1.1.9
+Using rack 1.5.2
+Using dragonfly 0.9.15
+Using eventmachine 1.0.3
+Using faker 0.9.5
+Using ffi 1.9.3
+Using tilt 1.4.1
+Using haml 4.0.5
+Using hike 1.2.3
+Using json 1.8.1
+Using multi_xml 0.5.5
+Using httparty 0.13.1
+Using multipart-post 2.0.0
+Using httmultiparty 0.3.10
+Using less 2.2.2
+Using libv8 3.16.14.7
+Using listen 0.7.3
+Using locomotivecms-liquid 2.6.0
+Using locomotivecms-solid 0.2.2.1
+Using logger 1.2.8
+Using mime-types 1.25.1
+Using sprockets 2.12.2
+Using sprockets-sass 1.0.3
+Using stringex 2.0.11
+Using tzinfo 0.3.41
+Using zip 2.0.2
+Using locomotivecms_mounter 1.4.1
+Using rack-cache 1.2
+Using redcarpet 3.0.0
+Using thin 1.5.1
+Using thor 0.19.1
+Using will_paginate 3.0.7
+Using locomotivecms_wagon 1.4.0
+Using rb-fsevent 0.9.4
+Using rb-inotify 0.9.5
+Using ref 1.0.5
+Using therubyracer 0.12.1
+Using wdm 0.1.0
+Using bundler 1.6.2
+Your bundle is complete!
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+zeyad@zeyad-SVE1411EGXB:~/developments/bstrap/engine_active/engine_dir$ ls
+app  config  config.ru  data  Gemfile  Gemfile.lock  public
+zeyad@zeyad-SVE1411EGXB:~/developments/bstrap/engine_active/engine_dir$ bundle exec wagon server
+Could not find command "server".
+zeyad@zeyad-SVE1411EGXB:~/developments/bstrap/engine_active/engine_dir$ bundle exec wagon serve
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:3333, CTRL+C to stop
+

@@ -1,0 +1,182 @@
+zeyad@zeyad-SVE1411EGXB:~$ cd rails_apps/
+zeyad@zeyad-SVE1411EGXB:~/rails_apps$ ls
+myapp
+zeyad@zeyad-SVE1411EGXB:~/rails_apps$ cd myapp/
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp$ ls
+app  config     db       Gemfile.lock  log     Rakefile     test  vendor
+bin  config.ru  Gemfile  lib           public  README.rdoc  tmp
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp$ bundle install
+Using rake 10.3.2
+Using i18n 0.6.11
+Using json 1.8.1
+Using minitest 5.4.1
+Using thread_safe 0.3.4
+Using tzinfo 1.2.2
+Using activesupport 4.1.4
+Using builder 3.2.2
+Using erubis 2.7.0
+Using actionview 4.1.4
+Using rack 1.5.2
+Using rack-test 0.6.2
+Using actionpack 4.1.4
+Using mime-types 1.25.1
+Using polyglot 0.3.5
+Using treetop 1.4.15
+Using mail 2.5.4
+Using actionmailer 4.1.4
+Using activemodel 4.1.4
+Using arel 5.0.1.20140414130214
+Using activerecord 4.1.4
+Using coffee-script-source 1.8.0
+Using execjs 2.2.1
+Using coffee-script 2.3.0
+Using thor 0.19.1
+Using railties 4.1.4
+Using coffee-rails 4.0.1
+Using hike 1.2.3
+Using multi_json 1.10.1
+Using jbuilder 2.1.3
+Using jquery-rails 3.1.1
+Using bundler 1.6.2
+Using tilt 1.4.1
+Using sprockets 2.11.0
+Using sprockets-rails 2.1.3
+Using rails 4.1.4
+Using rdoc 4.1.1
+Using sass 3.2.19
+Using sass-rails 4.0.3
+Using sdoc 0.4.1
+Using spring 1.1.3
+Using sqlite3 1.3.9
+Using turbolinks 2.3.0
+Using uglifier 2.5.3
+Your bundle is complete!
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp$ ls
+app  config     db       Gemfile.lock  log     Rakefile     test  vendor
+bin  config.ru  Gemfile  lib           public  README.rdoc  tmp
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp$ cd app/
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/app$ ls
+assets  controllers  helpers  mailers  models  views
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/app$ cd controllers/
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/app/controllers$ ls
+application_controller.rb  concerns  posts_controller.rb
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/app/controllers$ cat concerns/.keep 
+application_controller.rb  posts_controller.rb
+concerns/                  
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/app/controllers$ cat concerns/.keep 
+application_controller.rb  posts_controller.rb
+concerns/                  
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/app/controllers$ ls
+application_controller.rb  concerns  posts_controller.rb
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/app/controllers$ cat application_controller.rb 
+class ApplicationController < ActionController::Base
+  # Prevent CSRF attacks by raising an exception.
+  # For APIs, you may want to use :null_session instead.
+  protect_from_forgery with: :exception
+end
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/app/controllers$ ls
+application_controller.rb  concerns  posts_controller.rb
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/app/controllers$ emacs application_controller.rb 
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/app/controllers$ emacs application_controller.rb 
+application_controller.rb  posts_controller.rb
+concerns/                  
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/app/controllers$ ls
+application_controller.rb  concerns  posts_controller.rb
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/app/controllers$ emacs posts_controller.rb 
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/app/controllers$ ls
+application_controller.rb  concerns  posts_controller.rb
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/app/controllers$ cd ../..
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp$ ls
+app  bin  config  config.ru  db  Gemfile  Gemfile.lock  lib  log  public  Rakefile  README.rdoc  test  tmp  vendor
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp$ rails g scaffold issues title description:text no_followings:integer
+Plural version of the model detected, using singularized version. Override with --force-plural.
+      invoke  active_record
+      create    db/migrate/20140908005546_create_issues.rb
+      create    app/models/issue.rb
+      invoke    test_unit
+      create      test/models/issue_test.rb
+      create      test/fixtures/issues.yml
+      invoke  resource_route
+       route    resources :issues
+      invoke  scaffold_controller
+      create    app/controllers/issues_controller.rb
+      invoke    erb
+      create      app/views/issues
+      create      app/views/issues/index.html.erb
+      create      app/views/issues/edit.html.erb
+      create      app/views/issues/show.html.erb
+      create      app/views/issues/new.html.erb
+      create      app/views/issues/_form.html.erb
+      invoke    test_unit
+      create      test/controllers/issues_controller_test.rb
+      invoke    helper
+      create      app/helpers/issues_helper.rb
+      invoke      test_unit
+      create        test/helpers/issues_helper_test.rb
+      invoke    jbuilder
+      create      app/views/issues/index.json.jbuilder
+      create      app/views/issues/show.json.jbuilder
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/issues.js.coffee
+      invoke    scss
+      create      app/assets/stylesheets/issues.css.scss
+      invoke  scss
+      create    app/assets/stylesheets/scaffolds.css.scss
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp$ ls
+app  bin  config  config.ru  db  Gemfile  Gemfile.lock  lib  log  public  Rakefile  README.rdoc  test  tmp  vendor
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp$ car app/models/
+concerns/ issue.rb  .keep     
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp$ car app/models/issue.rb 
+The program 'car' is currently not installed. You can install it by typing:
+sudo apt-get install ucommon-utils
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp$ cat app/models/issue.rb 
+class Issue < ActiveRecord::Base
+end
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp$ ls
+app  bin  config  config.ru  db  Gemfile  Gemfile.lock  lib  log  public  Rakefile  README.rdoc  test  tmp  vendor
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp$ cd test/
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/test$ ls
+controllers  fixtures  helpers  integration  mailers  models  test_helper.rb
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/test$ cd models/
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/test/models$ ls
+issue_test.rb
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/test/models$ cat issue_test.rb 
+require 'test_helper'
+
+class IssueTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
+end
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/test/models$ rails s
+=> Booting WEBrick
+=> Rails 4.1.4 application starting in development on http://0.0.0.0:3000
+=> Run `rails server -h` for more startup options
+=> Notice: server is listening on all interfaces (0.0.0.0). Consider using 127.0.0.1 (--binding option)
+=> Ctrl-C to shutdown server
+[2014-09-07 20:59:15] INFO  WEBrick 1.3.1
+[2014-09-07 20:59:15] INFO  ruby 2.1.2 (2014-05-08) [x86_64-linux]
+[2014-09-07 20:59:15] INFO  WEBrick::HTTPServer#start: pid=3833 port=3000
+
+require 'rake'
+Rake.application.run
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp/bin$ cd ..
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp$ rake db:migrate
+== 20140908005546 CreateIssues: migrating =====================================
+-- create_table(:issues)
+   -> 0.0011s
+== 20140908005546 CreateIssues: migrated (0.0012s) ============================
+
+zeyad@zeyad-SVE1411EGXB:~/rails_apps/myapp$ rails s
+=> Booting WEBrick
+=> Rails 4.1.4 application starting in development on http://0.0.0.0:3000
+=> Run `rails server -h` for more startup options
+=> Notice: server is listening on all interfaces (0.0.0.0). Consider using 127.0.0.1 (--binding option)
+=> Ctrl-C to shutdown server
+[2014-09-07 21:04:12] INFO  WEBrick 1.3.1
+[2014-09-07 21:04:12] INFO  ruby 2.1.2 (2014-05-08) [x86_64-linux]
+[2014-09-07 21:04:12] INFO  WEBrick::HTTPServer#start: pid=3961 port=3000
+
+
