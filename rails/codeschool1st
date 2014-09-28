@@ -1,0 +1,190 @@
+$ rails new Zombi­eTweets
+create  
+create  README
+create  Rakefile
+create  config.ru
+create  .gitignore
+create  Gemfile
+create  app
+create  app/assets/images/rails.png
+create  app/assets/javascripts/application.js
+create  app/assets/stylesheets/application.css
+create  app/controllers/application_controller.rb
+create  app/helpers/application_helper.rb
+create  app/mailers
+create  app/models
+create  app/views/layouts/application.html.erb
+create  app/mailers/.gitkeep
+create  app/models/.gitkeep
+create  config
+create  config/routes.rb
+create  config/application.rb
+create  config/environment.rb
+create  config/environments
+create  config/environments/development.rb
+create  config/environments/production.rb
+create  config/environments/test.rb
+create  config/initializers
+create  config/initializers/backtrace_silencers.rb
+create  config/initializers/inflections.rb
+create  config/initializers/mime_types.rb
+create  config/initializers/secret_token.rb
+create  config/initializers/session_store.rb
+create  config/initializers/wrap_parameters.rb
+create  config/locales
+create  config/locales/en.yml
+create  config/boot.rb
+create  config/database.yml
+create  db
+create  db/seeds.rb
+create  doc
+create  doc/README_FOR_APP
+create  lib
+create  lib/tasks
+create  lib/tasks/.gitkeep
+create  log
+create  log/.gitkeep
+create  public
+create  public/404.html
+create  public/422.html
+create  public/500.html
+create  public/favicon.ico
+create  public/index.html
+create  public/robots.txt
+create  script
+create  script/rails
+create  test/fixtures
+create  test/fixtures/.gitkeep
+create  test/functional
+create  test/functional/.gitkeep
+create  test/integration
+create  test/integration/.gitkeep
+create  test/unit
+create  test/unit/.gitkeep
+create  test/performance/browsing_test.rb
+create  test/test_helper.rb
+create  tmp/cache
+create  tmp/cache/.gitkeep
+create  vendor/assets/stylesheets
+create  vendor/assets/stylesheets/.gitkeep
+create  vendor/plugins
+create  vendor/plugins/.gitkeep
+Successfully completed Challenge 1
+$  
+
+==>>Then we create tweet active record like this ;
+
+$rails g scaffold tweet status:string zombie_id:integer
+
+==>> Then add create table tweets with the below properties status and zombie_id , then we run 
+
+class CreateTweets < ActiveRecord::Migration
+  def change
+  create_table :tweets do |t|
+  
+  t.string :status
+  t.integer :zombie_id
+  
+  
+  end
+  end
+end
+
+
+==>> now we run rake db:migrate to migrate the the new db created 
+
+
+$ rake db:mi­gration
+Incorrect migration command
+$ rake db:mi­grate
+==  CreateTweets: migrating ===================================================
+-- create_table(:tweets)
+   -> 0.0017s
+==  CreateTweets: migrated (0.0025s) ==========================================
+Successfully completed the Challenge!
+
+
+==>> starts server
+$ rails s
+=> Booting WEBrick
+=> Rails 3.1.0 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2014-09-27 22-19-54] INFO  WEBrick 1.3.1
+[2014-09-27 22-19-54] INFO  ruby 1.9.2 (2011-02-18) [x86_64-darwin10.7.0]
+[2014-09-27 22-19-54] INFO  WEBrick::HTTPServer#start: pid
+
+
+==>> Now , Enter the command line text to generate a migration called AddPrivacyToTweets which adds a boolean field called private.
+
+$ rails g migra­tion AddPr­ivacyToTwe­ets priva­te:boolean­
+invoke  active_record
+create    db/migrate/20140927222156_add_privacy_to_tweets.rb
+Successfully completed Challenge 7
+$  
+
+==>> Create migration by hand that adds two fields to the tweets table: a location string field which has a limit of 30 and a boolean field called show_location which defaults to false.
+
+class AddLocationToTweets < ActiveRecord::Migration
+  def change
+  
+  add_column :tweets , :location , :string , limit:30
+  add_column :tweets , :show_location , :boolean  , default:false
+
+  end
+end
+
+
+==>> Assume we ran that last migration. However we forgot a column we wanted to add, could you please roll it back from the command line?
+
+
+$ rake db:ro­llback
+==  AddLocationToTweets: reverting ============================================
+-- remove_column("tweets", :show_location)
+   -> 0.0008s
+-- remove_column("tweets", :location)
+   -> 0.0003s
+==  AddLocationToTweets: reverted (0.0012s) ===================================
+Successfully completed Challenge 8
+$  
+
+
+==>> Now that we've rolled back, add a category_name string field and use the rename command to rename the status column to message instead.
+
+class AddLocationToTweets < ActiveRecord::Migration
+  def change
+    add_column :tweets, :location, :string, limit: 30
+    add_column :tweets, :show_location, :boolean, default: false
+    add_column :tweets, :category_name, :string
+    rename_column :tweets, :status , :message
+end 
+end
+
+==>> On second thought, that category_name string column was a bad idea. Write a migration to remove the category_name column.
+
+
+class RemoveCategoryNameFromTweets < ActiveRecord::Migration
+  def up
+
+      remove_column :tweets , :category_name 
+  end
+
+  def down
+    add_column :tweets , :category_name , :string
+  end
+end
+
+
+==>> You've decided to install the app on another computer. Please enter the command you should use (instead of rake db:migrate) to create the database, load the schema, and run the seed file.
+
+
+$ rake db:se­tup
+-- create_table("tweets", {:force=>true})
+   -> 0.0389s
+-- add_index("tweets", ["zombie_id"], {:name=>"index_tweets_on_zombie_id"})
+   -> 0.0024s
+-- initialize_schema_migrations_table()
+   -> 0.0029s
+-- assume_migrated_upto_version(20140928152619, ["db/migrate"])
+   -> 0.0035s
+
